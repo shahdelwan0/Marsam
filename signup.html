@@ -257,193 +257,183 @@
       </svg>
       <div class="progress-container">
         <div class="progress-bar">
-          <div class="progress"></div>
+          <div class="progress-bar-inner" id="progress-bar-inner"></div>
         </div>
-        <div class="progress-labels">
-          <span class="label" data-step="1">البريد الالكتروني</span>
-          <span class="label" data-step="2">التحقق</span>
-          <span class="label" data-step="3">البيانات</span>
-          <span class="label" data-step="4">الاكمال</span>
-        </div>
-      </div>
-      <div class="container step1">
-        <h1>
-          مرحباً بك في مرسم<br />
-          انضم الآن لأكبر منصة إبداعية للفنانين العرب
-        </h1>
-        <h2>
-          أهلا بك في مرسم - المنصة الأولى للإبداع في العالم العربي يمكنك استكشاف
-          أعمال الآخرين ومشاركة إبداعاتك بسهولة
-        </h2>
-        <div class="form-group">
-          <form id="form" action="/">
-            <h3><label for="email-address">أدخل بريدك الإلكتروني</label></h3>
-            <div class="input-control">
-              <input
-                type="email"
-                placeholder="مثال : example@gmail.com"
-                id="email-address"
-                onkeyup="validateEmail(this.value)"
-              />
-              <p id="email-msg" class="msg"></p>
+        
+        <div class="content-wrapper">
+          <div class="form-side">
+            <div id="step1" class="slide-in">
+              <div class="header">
+                <h1>إنشاء حساب جديد</h1>
+                <p>انضم الآن إلى أكبر منصة إبداعية للفنانين العرب</p>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                <div id="email-error" class="error-message"></div>
+              </div>
+              
+              <div class="buttons-row">
+                <button type="button" class="form-button" id="next-step1">متابعة</button>
+              </div>
+              
+              <div class="form-divider">
+                <span>أو</span>
+              </div>
+              
+              <div class="form-links">
+                <a href="#" class="form-link">لديك حساب بالفعل؟  </a>
+                <a href="#" class="form-link">نسيت كلمة المرور؟</a>
+              </div>
             </div>
-          </form>
-          <p>
-            لديك حساب؟
-            <a href="javascript:void(0)" onclick="login()">تسجيل الدخول</a>
-          </p>
-          <button class="nextButton">التحقق</button>
-        </div>
-      </div>
-      <div class="container step2">
-        <h1>
-          مرحباً بك في مرسم<br />
-          انضم الآن لأكبر منصة إبداعية للفنانين العرب
-        </h1>
-        <h2>
-          أهلا بك في مرسم - المنصة الأولى للإبداع في العالم العربي يمكنك استكشاف
-          أعمال الآخرين ومشاركة إبداعاتك بسهولة
-        </h2>
-        <div class="form-group">
-          <h3>
-            تم إرسال كود إلى بريدك الالكتروني <span id="ver-email"></span>
-          </h3>
-          <div class="otp-form">
-            <p>أدخل الرمز المكون من 4 أرقام الذي أرسل إلى حسابك</p>
-            <div class="otp-group">
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
+            
+            <div id="step2" class="slide-in" style="display: none;">
+              <div class="header">
+                <h1>التحقق من البريد الإلكتروني</h1>
+                <p>أدخل رمز التحقق المكون من 4 أرقام الذي تم إرساله إلى <span id="display-email"></span></p>
+              </div>
+              
+              <div class="verification-code">
+                <input type="number" maxlength="1" class="verification-input">
+                <input type="number" maxlength="1" class="verification-input">
+                <input type="number" maxlength="1" class="verification-input">
+                <input type="number" maxlength="1" class="verification-input">
+              </div>
+              
+              <a href="#" class="resend-code">إعادة إرسال الرمز</a>
+              
+              <div class="buttons-row">
+                <button type="button" class="back-button" id="back-step2">رجوع</button>
+                <button type="button" class="form-button" id="next-step2">تحقق</button>
+              </div>
             </div>
-            <p class="btns">
-              <a
-                href="javascript:void(0)"
-                onclick="changeMyEmail()"
-                class="resend"
-                >إعادة إرسال الرمز</a
-              >
-              <button class="verButton">التحقق</button>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container step3">
-        <div class="form-group">
-          <form action="/">
-            <div class="required">
-              <h3>قم بإنشاء هويتك في مجتمع مرسم</h3>
-              <div class="small-conatiner">
+            
+            <div id="step3" class="slide-in" style="display: none;">
+              <div class="header">
+                <h1>إنشاء الحساب</h1>
+                <p>قم بإنشاء هويتك في مجتمع مرسم</p>
+              </div>
+              
+              <div class="form-group">
                 <label for="username">اسم المستخدم</label>
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="مستخدم مرسم"
-                  required
-                />
+                <input type="text" id="username" class="form-control" placeholder="أدخل اسم المستخدم">
               </div>
-
-              <div class="small-conatiner">
+              
+              <div class="form-group">
                 <label for="fullname">الاسم الكامل</label>
-                <input
-                  id="fullname"
-                  type="text"
-                  placeholder="مثال : محمد علي"
-                  required
-                />
+                <input type="text" id="fullname" class="form-control" placeholder="أدخل اسمك الكامل">
               </div>
-
-              <div class="small-conatiner">
-                <label for="pw">كلمة المرور</label>
-                <input type="password" name="pw" id="pw" required />
+              
+              <div class="form-group">
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" class="form-control" placeholder="أدخل كلمة المرور">
+              </div>
+              
+              <div class="buttons-row">
+                <button type="button" class="back-button" id="back-step3">رجوع</button>
+                <button type="button" class="form-button" id="next-step3">متابعة</button>
               </div>
             </div>
-            <button type="button" class="nextButton2">التالي</button>
-            <!-- Change class from nextButton to nextButton2 -->
-          </form>
-        </div>
-      </div>
-      <div class="container step4">
-        <div class="form-group">
-          <form action="/">
-            <div class="optional">
-              <span class="skip" onclick="skipOptional()">تخطي</span>
-              <h3>معلومات إضافية</h3>
-              <p>
-                المعلومات الاضافية تساعدنا في تقديم تجربة أفضل، لكنها اختيارية
-                تمامًا
-              </p>
-              <div class="small-conatiner">
-                <label for="tel">رقم الهاتف</label>
-                <input
-                  id="tel"
-                  type="tel"
-                  placeholder=" مثال : 0123456789"
-                  dir="rtl"
-                />
+            
+            <div id="step4" class="slide-in" style="display: none;">
+              <div class="header">
+                <h1>معلومات إضافية</h1>
+                <p>هذه المعلومات اختيارية وتساعدنا في تخصيص تجربتك</p>
               </div>
-
-              <div class="small-conatiner">
-                <label for="bd">تاريخ الميلاد</label>
-                <input id="bd" type="date" name="bd" dir="rtl" />
+              
+              <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" class="form-control" placeholder="أدخل رقم هاتفك">
               </div>
-
-              <div class="small-container">
+              
+              <div class="form-group">
+                <label for="birthdate">تاريخ الميلاد</label>
+                <input type="date" id="birthdate" class="form-control">
+              </div>
+              
+              <div class="form-group">
                 <label for="gender">الجنس</label>
-                <input type="radio" name="gender" id="male" value="male" />
-                <label for="male">ذكر</label>
-                <input type="radio" name="gender" id="female" value="female" />
-                <label for="female">أنثى</label>
+                <div class="radio-group">
+                  <div class="radio-option">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">ذكر</label>
+                  </div>
+                  <div class="radio-option">
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">أنثى</label>
+                  </div>
+                  <button class="skip-button" id="skip-step4">تخطي</button>
+                </div>
+              </div>
+              
+              <div class="buttons-row">
+                <button type="button" class="back-button" id="back-step4">رجوع</button>
+                <button type="button" class="form-button" id="next-step4">متابعة</button>
               </div>
             </div>
-
-            <button type="button" class="nextButton2">التالي</button>
-          </form>
-        </div>
-      </div>
-      <div class="container step5">
-        <h3>اتفاقية الاستخدام</h3>
-        <div class="terms-container">
-          <div class="terms-content">
-            <p>مرحبًا بك في عالم مرسم للإبداع!</p>
-            <p>
-              عند الانضمام إلى عالم مرسم، فإنك توافق على شروط الاستخدام وهي:
-            </p>
-            <ul>
-              <li>أن تكون لطيفًا مع الآخرين لأن الفن يجمعنا ولا يفرقنا.</li>
-              <li>ألّا تنسب أعمال غيرك لنفسك فالإبداع الحقيقي هو ما يميزك.</li>
-              <li>أن تشارك بإيجابية في المجتمع فالفن يزدهر بالتعاون</li>
-              <li>أن تحترم خصوصية الآخرين مثلما تحب أنتحترم خصوصيتك.</li>
-              <li>أن تستمع بوقتك معنا فنحن هنا لنلهمك ونلهم منك.</li>
-            </ul>
+            
+            <div id="step5" class="slide-in" style="display: none;">
+              <div class="header">
+                <h1>اتفاقية الاستخدام</h1>
+                <p>يرجى قراءة شروط الاستخدام والموافقة عليها للمتابعة</p>
+              </div>
+              
+              <div class="terms-container">
+                <div class="terms-content">
+                  <p>مرحبًا بك في عالم مرسم للإبداع!</p>
+                  <p>عند الانضمام إلى عالم مرسم، فإنك توافق على شروط الاستخدام وهي:</p>
+                  <ul>
+                    <li>أن تكون لطيفًا مع الآخرين لأن الفن يجمعنا ولا يفرقنا.</li>
+                    <li>ألّا تنسب أعمال غيرك لنفسك فالإبداع الحقيقي هو ما يميزك.</li>
+                    <li>أن تشارك بإيجابية في المجتمع فالفن يزدهر بالتعاون.</li>
+                    <li>أن تحترم خصوصية الآخرين مثلما تحب أن تحترم خصوصيتك.</li>
+                    <li>أن تستمتع بوقتك معنا فنحن هنا لنلهمك ونلهم منك.</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="agree-terms">
+                <label for="agree-terms">أوافق على شروط الاستخدام</label>
+              </div>
+              
+              <div class="buttons-row">
+                <button type="button" class="back-button" id="back-step5">رجوع</button>
+                <button type="button" class="form-button" id="complete-signup">إنهاء التسجيل</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-side" style="background-image: url('https://cdn.mos.cms.futurecdn.net/jbCNvTM4gwr2qV8X8fW3ZB-650-80.png.webp')">
+            <div class="info-overlay">
+              <div class="info-content">
+                <h2>مرحباً بك في مرسم</h2>
+                <p>مرسم هي منصة فنية متكاملة تجمع المبدعين العرب في مكان واحد.</p>
+                <ul>
+                  <li>اعرض أعمالك الفنية للعالم</li>
+                  <li>تواصل مع فنانين آخرين</li>
+                  <li>احصل على فرص عمل وتعاون</li>
+                  <li>تعلم مهارات جديدة من خلال الدورات</li>
+                </ul>
+                <p>انضم إلى مجتمع الإبداع العربي الأكبر من نوعه!</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="agreement">
-          <input type="checkbox" name="agree" id="agree" />
-          <label for="agree">أوافق على شروط الاستخدام</label>
-        </div>
-        <button class="nextButton">إنهاء التسجيل</button>
       </div>
-      <footer class="main-footer">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <p class="copyright">© مرسم 2025 - منصة الإبداع العربي.</p>
-          </div>
-          <nav class="footer-navigation">
-            <ul class="footer-links">
-              <li><a href="/terms">الشروط والأحكام</a></li>
-              <li><a href="/privacy">سياسة الخصوصية</a></li>
-              <li><a href="/help">مركز المساعدة</a></li>
-              <li><a href="/contact">تواصل معنا</a></li>
-            </ul>
-          </nav>
-        </div>
-      </footer>
     </div>
-  </body>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script src="js/main.js"></script>
+    
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">الشروط والأحكام</a>
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">مركز المساعدة</a>
+        <a href="#">تواصل معنا</a>
+      </div>
+    </footer>
+  </div>
+  <script src="js/signup.js"> </script>
+
+</body>
 </html>
