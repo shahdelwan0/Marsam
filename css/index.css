@@ -747,7 +747,7 @@ button.disable {
   width: 100%;
   left: 0;
   right: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
   z-index: 1000;
   border-radius: 0 0 12px 12px;
   margin-top: 0;
@@ -951,7 +951,7 @@ button.disable {
     font-size: 1rem;
     padding: 0.6rem 1.25rem;
   }
-
+  
   .navbar-nav {
     margin-top: 1rem;
   }
