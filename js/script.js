@@ -6,3 +6,10 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("navbar-blur");
   }
 });
+const buttons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+buttons.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const icon = this.querySelector(".arrow-icon");
+    icon.classList.toggle("rotate");
+  });
+});
