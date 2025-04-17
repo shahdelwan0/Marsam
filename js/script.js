@@ -13,3 +13,23 @@ buttons.forEach((btn) => {
     icon.classList.toggle("rotate");
   });
 });
+
+$(document).ready(function(){
+  // Change selector to match new class
+  $('.slick-carousel').slick({
+    rtl: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
