@@ -15,35 +15,29 @@ buttons.forEach((btn) => {
 });
 
 $(document).ready(function () {
-  $(".slick-carousel").each(function () {
-    var $carousel = $(this);
-    var slideCount = $carousel.children('.slick-slide').length;
-    var slidesToShowDesktop = Math.min(5, slideCount);
-    var slidesToShowMobile = Math.min(1, slideCount);
-
-    $carousel.slick({
-      rtl: true,
-      infinite: false,
-      slidesToShow: slidesToShowDesktop,
-      slidesToScroll: 1,
-      arrows: true,
-      adaptiveHeight: true,
-      centerMode: false,
-      variableWidth: false,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: slidesToShowMobile,
-            arrows: false,
-            infinite: false,
-            adaptiveHeight: true,
-            centerMode: false,
-            variableWidth: true,
-            dots: false,
-          },
+  $(".slick-carousel").slick({
+    rtl: true,
+    infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    adaptiveHeight: true,
+    centerMode: false,
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          arrows: false,
+          infinite: false,
+          adaptiveHeight: true,
+          centerMode: false,
+          variableWidth: true,
+          dots: false,
         },
-      ],
-    });
+      },
+    ],
   });
 });

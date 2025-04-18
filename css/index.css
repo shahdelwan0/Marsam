@@ -5,6 +5,12 @@
   box-sizing: border-box;
   font-family: "El Messiri", sans-serif;
 }
+html {
+  overflow-y: scroll;
+}
+body.modal-open {
+  padding-right: 0 !important;
+}
 :root {
   --primary-color: #5d2e81;
   --text-color: #1f2937;
@@ -22,8 +28,8 @@
 }
 .nav-item.dropdown:hover > .nav-link,
 .nav-item.dropdown .dropdown-menu:hover ~ .nav-link {
-  background-color: var(--primary-color) !important ;
-  color: var(--bg-color) !important;
+  background-color: #a084ca !important ;
+  color: var(--text-color) !important;
 }
 
 .nav-item.dropdown:hover .dropdown-menu,
@@ -91,23 +97,7 @@ body {
   background-color: transparent !important;
   color: var(--bg-color) !important;
 }
-.dropdown-menu {
-  position: fixed;
-  top: 65px;
-  left: 0;
-  width: 100%;
-  text-align: right !important;
-  display: block !important;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  background-color: var(--primary-color) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-}
+
 .nav-item.dropdown:hover .fa-caret-down {
   transform: rotate(180deg);
   transition: transform 0.3s;
@@ -141,6 +131,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.btn-signup {
+  background-color: var(--bg-color) !important;
+  color: var(--primary-color);
+  border: var(--primary-color) 1px solid !important;
+}
+
+.btn-signup:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
+  border: var(--bg-color) 1px solid !important;
 }
 
 .toggler-fa-icon {
@@ -181,11 +182,6 @@ body {
 .nav-item .nav-link {
   padding: 1.5rem !important;
 }
-.navbar {
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
 
 .dropdown {
   position: static !important;
@@ -201,10 +197,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  background-color: var(--primary-color) !important;
+  background-color: #a084ca !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 2rem !important;
   border: none !important;
+  border-radius: 0 !important;
 }
 .dropdown-toggle::after {
   display: none !important;
@@ -405,7 +402,7 @@ body {
 
 @media (max-width: 991.98px) {
   .footer-section {
-    padding: 1.5rem 0 0.5rem 0;
+    padding: 0.7rem 0 0.3rem 0;
   }
   .footer-heading {
     font-size: 1.1rem;
@@ -424,7 +421,6 @@ body {
 
 @media (max-width: 767.98px) {
   .footer-section .row {
-    text-align: center;
   }
   .footer-heading::after {
     right: 50% !important;
@@ -489,14 +485,6 @@ body {
   font-weight: bold;
   margin-bottom: 15px;
   margin-top: 15px;
-}
-.slick-carousel .slick-slide {
-  width: 228px !important;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: auto;
 }
 
 .cat-item {
@@ -587,6 +575,9 @@ body {
   box-shadow: none !important;
   border: none !important;
 }
+.modal-body form a:hover {
+  text-decoration: underline !important;
+}
 .form-control {
   border: 1px solid var(--progress-bg) !important;
   border-radius: 5px;
@@ -646,21 +637,6 @@ body {
   position: static !important;
 }
 
-.dropdown-menu {
-  position: fixed;
-  top: 65px;
-  left: 0;
-  width: 100%;
-  text-align: right !important;
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  background-color: var(--primary-color) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-}
 .dropdown-toggle::after {
   display: none !important;
 }
@@ -680,8 +656,8 @@ body {
 }
 
 .nav-link:hover {
-  background-color: var(--primary-color) !important;
-  color: var(--bg-color) !important;
+  background-color: #a084ca !important;
+  color: var(--text-color) !important;
 }
 
 .arrow-icon {
