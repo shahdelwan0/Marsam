@@ -57,7 +57,7 @@ body {
   margin-bottom: 0 !important;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-  background-color: var(--progress-bg) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
   position: fixed;
   width: 100%;
   top: 0;
@@ -67,8 +67,8 @@ body {
 }
 
 .navbar-blur {
-  backdrop-filter: blur(16px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
   background-color: rgba(255, 255, 255, 0.92) !important;
   box-shadow: 0 2px 16px 0 rgba(93, 46, 129, 0.1) !important;
   transition: background-color 0.3s, backdrop-filter 0.3s, box-shadow 0.3s,
