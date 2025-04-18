@@ -22,7 +22,8 @@ body.modal-open {
   --bg-color: #f3f4f6;
   --input-bg: #ffffff;
   --progress-bg: #e0d8f0;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --footer-bg: #ffffff;
   --footer-heading: #5d2e81;
   --footer-text: #4b5563;
@@ -60,7 +61,8 @@ body {
   -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
   backdrop-filter: blur(20px) saturate(160%) !important;
   box-shadow: 0 2px 16px 0 rgba(93, 46, 129, 0.1) !important;
-  transition: background-color 0.3s, backdrop-filter 0.3s, box-shadow 0.3s, border-bottom 0.3s !important;
+  transition: background-color 0.3s, backdrop-filter 0.3s, box-shadow 0.3s,
+    border-bottom 0.3s !important;
 }
 
 .navbar-brand {
@@ -382,7 +384,10 @@ body {
   border-radius: 50%;
   background-color: transparent;
   color: var(--primary-color);
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1.2rem;
 }
 
@@ -501,7 +506,8 @@ body {
 }
 
 #loginModal .btn-close {
-  filter: invert(24%) sepia(48%) saturate(1162%) hue-rotate(243deg) brightness(90%) contrast(90%);
+  filter: invert(24%) sepia(48%) saturate(1162%) hue-rotate(243deg)
+    brightness(90%) contrast(90%);
 }
 
 #loginModal .btn-close:hover,
