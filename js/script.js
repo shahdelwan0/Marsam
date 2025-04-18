@@ -14,22 +14,36 @@ buttons.forEach((btn) => {
   });
 });
 
-$(document).ready(function(){
-  // Change selector to match new class
-  $('.slick-carousel').slick({
-    rtl: true,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+$(document).ready(function () {
+  $(".slick-carousel").each(function () {
+    var $carousel = $(this);
+    var slideCount = $carousel.children('.slick-slide').length;
+    var slidesToShowDesktop = Math.min(5, slideCount);
+    var slidesToShowMobile = Math.min(1, slideCount);
+
+    $carousel.slick({
+      rtl: true,
+      infinite: false,
+      slidesToShow: slidesToShowDesktop,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      adaptiveHeight: true,
+      centerMode: false,
+      variableWidth: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: slidesToShowMobile,
+            arrows: false,
+            infinite: false,
+            adaptiveHeight: true,
+            centerMode: false,
+            variableWidth: true,
+          },
+        },
+      ],
+    });
   });
 });
