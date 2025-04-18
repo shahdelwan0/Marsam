@@ -175,8 +175,8 @@ body {
 /* Dropdown Menu Styles */
 .nav-item.dropdown:hover > .nav-link,
 .nav-item.dropdown .dropdown-menu:hover ~ .nav-link {
-  background-color: #a084ca !important;
-  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
 }
 
 .nav-item.dropdown:hover .dropdown-menu,
@@ -201,7 +201,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  background-color: #a084ca !important;
+  background-color: var(--primary-color) !important;
   margin: 0 !important;
   padding: 2rem !important;
   border: none !important;
@@ -240,6 +240,7 @@ body {
   color: var(--bg-color) !important;
   border: none !important;
   transition: background-color 0.3s, color 0.3s;
+  padding: 12px 24px;
 }
 
 .btn-primary:hover,
@@ -263,15 +264,20 @@ body {
 }
 
 .btn-signup {
-  background-color: var(--bg-color) !important;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  border: var(--primary-color) 1px solid !important;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 16px;
 }
 
 .btn-signup:hover {
-  background-color: var(--primary-color) !important;
-  color: var(--bg-color) !important;
-  border: var(--bg-color) 1px solid !important;
+  background-color: rgba(128, 68, 144, 0.05) !important;
+  border: 1px solid var(--primary-color) !important;
 }
 
 .notify-btn {
@@ -413,6 +419,9 @@ body {
 
 .main-carousel-container {
   margin-top: 90px;
+}
+.first-carousel {
+  margin-top: 10rem !important;
 }
 
 .main-carousel-container h2 {
