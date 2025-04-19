@@ -274,7 +274,7 @@ body {
   transition: all 0.2s ease;
   margin-left: 16px;
 }
-.btn-custom:hover{
+.btn-custom:hover {
   background-color: #784490 !important;
 }
 
@@ -412,10 +412,10 @@ body {
 }
 
 .footer-payment img {
-  width: 30px; /* Set a smaller width */
-  height: 30px; /* Set a smaller height */
-  object-fit: contain; /* Ensure the icons fit within the dimensions */
-  display: block; /* Ensure proper alignment */
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
 }
 
 /* Carousel Styles */
@@ -432,6 +432,9 @@ body {
 }
 .first-carousel {
   margin-top: 10rem !important;
+}
+.first-carousel h3 {
+  margin-top: 2rem !important;
 }
 .main-carousel-container h2 {
   font-size: 2.271rem;
