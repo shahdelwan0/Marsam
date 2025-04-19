@@ -14,7 +14,7 @@ buttons.forEach((btn) => {
   });
 });
 
-$(window).on("load", function () {
+$(document).ready(function () {
   $(".slick-carousel").slick({
     rtl: true,
     infinite: false,
@@ -34,7 +34,7 @@ $(window).on("load", function () {
           infinite: false,
           adaptiveHeight: true,
           centerMode: false,
-          variableWidth: false,
+          variableWidth: true,
           dots: false,
           touchMove: true,
           swipe: true,
