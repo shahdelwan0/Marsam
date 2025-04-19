@@ -36,6 +36,8 @@ $(document).ready(function () {
           centerMode: false,
           variableWidth: true,
           dots: false,
+          touchMove: true,
+          swipe: true
         },
       },
     ],
