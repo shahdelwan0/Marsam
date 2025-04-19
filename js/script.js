@@ -37,7 +37,7 @@ $(document).ready(function () {
           variableWidth: true,
           dots: false,
           touchMove: true,
-          swipe: true
+          swipe: true,
         },
       },
     ],

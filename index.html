@@ -288,6 +288,25 @@
 
             <!-- Sign Up Button -->
             <div class="d-flex m-auto align-items-center">
+              <!-- Search Bar -->
+              <form
+                class="d-flex ms-4 d-lg-flex d-none position-relative"
+                role="search"
+              >
+                <input
+                  class="form-control me-2 search-input pe-2"
+                  type="search"
+                  placeholder="ابحث هنا"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn search-btn position-absolute"
+                  type="submit"
+                  style="left: 5px; top: 50%; transform: translateY(-50%)"
+                >
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
               <a href="signup.html" class="btn me-2 mx-2 btn-signup">
                 سجل الآن
               </a>
@@ -303,6 +322,21 @@
         </div>
       </div>
     </nav>
+    <!-- Search Bar (Mobile) -->
+    <div class="container-fluid d-block d-lg-none mt-5 search-mobile">
+      <form class="d-flex position-relative" role="search">
+        <input
+          class="form-control me-2 search-input"
+          type="search"
+          placeholder="ابحث هنا"
+          aria-label="Search"
+          style="left: 5px; top: 50%; transform: translateY(-50%)"
+        />
+        <button class="btn position-absolute search-btn-mobile" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
 
     <!-- Carousel Section -->
     <div class="main-carousel-container container py-5 first-carousel">
